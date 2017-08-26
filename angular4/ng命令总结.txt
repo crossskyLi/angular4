@@ -1,0 +1,10 @@
+ng build --prod --aot
+//打包
+ng serve --port 4201    
+ng serve --host localhost --port 4201
+//修改端口号
+
+npm
+清除缓存
+
+npm cache clean
