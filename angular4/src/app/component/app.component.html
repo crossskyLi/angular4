@@ -1,0 +1,25 @@
+<!--第一个demo,双向数据绑定-->
+<!--
+
+<h1>{{title}}</h1>
+<h3>{{hero.id}},{{hero.name}}</h3>
+<div><label>id:</label>{{hero.id}}</div>
+<div><label>name:</label>{{hero.name}}</div>
+<div>
+  <label>name:</label>
+  <input [(ngModel)]='hero.name' placeholder = "名字">
+</div>
+-->
+
+
+<!--第二个demo,指令-->
+<h1>指令</h1>
+<div class="heroes">
+  <ul>
+    <li *ngFor = "let hero of heroes" (click) = "onSelect(hero)" [class.selected]="hero === selectedHero">
+      <span class="badge">{{hero.id}}</span>{{hero.name}}
+      <input [(ngModel)] = 'hero.name'>
+    </li>
+  </ul>
+</div>
+<hero-detail [hero]="selectedHero"></hero-detail>
